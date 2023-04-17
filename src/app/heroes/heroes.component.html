@@ -4,6 +4,16 @@
 <div><span>id: </span>{{hero.id}}</div>
 <div><span>name: </span>{{hero.name}}</div>
 
+<!--One way data binding-->
+<h1>Hello, my name is {{ name }} and this is one way data binding</h1>
+
+<!--Two way data binding-->
+<div>
+    <label for="">Hello , my name is {{name}} and this is two way data binding</label>
+    <input type="text" [(ngModel)] = "hero.name">
+</div>
+
+
 <!-- <h1>{{ heroes }} </h1>
 <h2>Dota 2 Heroes</h2>
     <ul>

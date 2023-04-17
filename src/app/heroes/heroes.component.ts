@@ -14,8 +14,10 @@ export class HeroesComponent {
   //   { id: 4, name: 'Magnus' },
   // ];
 
-  
-  price = 0
+  name = 'Rushal'
+
+
+  price = 18
 
   hero: Hero = {
     id: 1,
