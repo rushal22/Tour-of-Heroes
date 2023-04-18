@@ -1,17 +1,27 @@
 <!-- <p>{{ today | date:'dd/MM/yyyy' }}</p> -->
-<h1>{{price | currency }}</h1>
-<h1>{{ hero.name | uppercase  }}</h1>
+<!-- <h1>{{price | currency }}</h1> -->
+
+<h2>Dota 2 Hero List</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+      <span class="badge">{{hero.id}}</span> 
+      <span class="name">{{hero.name}}</span>
+  </li>
+</ul>
+
+
+<!-- <h1>{{ hero.name | uppercase  }}</h1>
 <div><span>id: </span>{{hero.id}}</div>
-<div><span>name: </span>{{hero.name}}</div>
+<div><span>name: </span>{{hero.name}}</div> -->
 
 <!--One way data binding-->
 <h1>Hello, my name is {{ name }} and this is one way data binding</h1>
 
 <!--Two way data binding-->
-<div>
+<!-- <div>
     <label for="">Hello , my name is {{name}} and this is two way data binding</label>
     <input type="text" [(ngModel)] = "hero.name">
-</div>
+</div> -->
 
 
 <!-- <h1>{{ heroes }} </h1>

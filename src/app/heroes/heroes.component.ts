@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+import { HEROES } from '../hero_list';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -7,21 +8,23 @@ import { Hero } from '../hero';
 })
 export class HeroesComponent {
 
-  // heroes = [
+  name = 'Rushal'
+
+
+  heroes = HEROES
+
+ 
+
+  // hero: Hero = {
+  //   id: 1,
+  //   name: 'Ember spirit',
+  // }
+
+    // heroes = [
   //   { id: 1, name: 'Bloodseeker' },
   //   { id: 2, name: 'Meepo' },
   //   { id: 3, name: 'Shadow Fiend' },
   //   { id: 4, name: 'Magnus' },
   // ];
-
-  name = 'Rushal'
-
-
-  price = 18
-
-  hero: Hero = {
-    id: 1,
-    name: 'Ember spirit',
-  }
   
 }
