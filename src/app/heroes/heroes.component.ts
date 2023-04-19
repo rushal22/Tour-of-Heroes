@@ -9,11 +9,15 @@ import { HEROES } from '../hero_list';
 export class HeroesComponent {
 
   name = 'Rushal'
-
+  clickedHero?: Hero;
 
   heroes = HEROES
 
- 
+ onClicked(hero: Hero): void{
+  console.log(hero);
+  this.clickedHero = hero;
+  
+ }
 
   // hero: Hero = {
   //   id: 1,
