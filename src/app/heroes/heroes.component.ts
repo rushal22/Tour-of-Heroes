@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Hero } from '../hero';
-import { HEROES } from '../hero_list';
-
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -11,9 +10,8 @@ import { HEROES } from '../hero_list';
 export class HeroesComponent {
 
   name = 'Rushal'
+  heroes : Hero [] = [];
   clickedHero?: Hero;
-
-  heroes = HEROES
 
  onClicked(hero: Hero): void{
   console.log(hero);
@@ -21,16 +19,16 @@ export class HeroesComponent {
   
  }
 
-  // hero: Hero = {
-  //   id: 1,
-  //   name: 'Ember spirit',
-  // }
+ constructor(private heroService: HeroService){
 
-    // heroes = [
-  //   { id: 1, name: 'Bloodseeker' },
-  //   { id: 2, name: 'Meepo' },
-  //   { id: 3, name: 'Shadow Fiend' },
-  //   { id: 4, name: 'Magnus' },
-  // ];
+ }
+ ngOnInit(): void {
+   this.getallHeroes();
+ }
+
+  getallHeroes(): void{
+    this.heroes = this.heroService.getHeroes();
+
+  }
   
 }
